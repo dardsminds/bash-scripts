@@ -1,0 +1,2 @@
+SSL_CERT_FILE=~/etc/cacert.pem RAILS_ENV=local_development bundle exec rails server
+

@@ -1,0 +1,11 @@
+BRANCH="${PWD##*/}"
+CURRENT_BRANCH=$(git branch --show-current)
+echo "creating new branch: " $BRANCH
+if [ "$BRANCH" != "$CURRENT_BRANCH" ]; then
+	git checkout -b $BRANCH
+else
+	echo "The current branch is already setup"	
+fi
+
+
+ 

@@ -1,0 +1,7 @@
+#!/bin/bash
+GBFILE=public/javascripts/gradebook.js
+ORIG_PATH="url: '/gradebook/get_data/' + grading_class_id,"
+TEMP_PATH="url: '/javascripts/gradebook_201x96.json?r=' + Math.random(),"
+sed -i '' "s|$TEMP_PATH|$ORIG_PATH|" $GBFILE
+
+ 
