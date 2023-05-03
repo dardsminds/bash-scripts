@@ -4,10 +4,10 @@ cp ../credentials.yml config/
 echo '----> set ignore file'
 git ls-files --others --exclude-from=.git/info/exclude
 
-echo '----> copy test data files'
-echo
-echo '/Users/dariomindoro/Dev/lms/gradebook_201x96.json'
-cp /Users/dariomindoro/Dev/lms/gradebook_201x96.json public/javascripts/ 
+#echo '----> copy test data files'
+#echo
+#echo '/Users/dariomindoro/Dev/lms/gradebook_201x96.json'
+#cp /Users/dariomindoro/Dev/lms/gradebook_201x96.json public/javascripts/ 
 
 echo '----> include sample data file to git exclude file'
 
@@ -21,6 +21,6 @@ git update-index --assume-unchanged config/environments/srv_development.rb
 echo "Pointing to local file path"
 FILE_PATH=config/environments/srv_development.rb
 CONTENT_OLD="$FILE_STORAGE = '/storage/'"
-CONTENT_NEW="$FILE_STORAGE = '/Users/dariomindoro/storage/'"
+CONTENT_NEW="$FILE_STORAGE = 'storage/'"
 sed -i '' "s|$CONTENT_OLD|$CONTENT_NEW|" $FILE_PATH
  
